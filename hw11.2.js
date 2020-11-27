@@ -5,7 +5,7 @@
 let CheckIfPrime = (x) =>
 {
   let result = "";
-  if(isNaN(x)) return result = `${x} - не число`;
+  if(isNaN(x) || typeof x !== "number") return result = `${x} - не число`;
   if(x > 1000) return result = `данные не верны`;
   if(x == 0 || x == 1) return result = `введённое число 0 или 1`;
   for(let i = 2; i < x; i++) {
