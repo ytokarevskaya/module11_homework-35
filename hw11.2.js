@@ -7,9 +7,9 @@ let CheckIfPrime = (x) =>
   let result = "";
   if(isNaN(x) || typeof x !== "number") return result = `${x} - не число`;
   if(x > 1000) return result = `данные не верны`;
-  if(x == 0 || x == 1) return result = `введённое число 0 или 1`;
+  if(x == 0 || x == 1) return result = `${x} не является ни простым, ни составным числом`;
   for(let i = 2; i < x; i++) {
-    if(x % i == 0) return `число ${x} - сложное число`;
+    if(x % i == 0) return `число ${x} - составное число`;
   };
   return `число ${x} - простое число`;
 }
